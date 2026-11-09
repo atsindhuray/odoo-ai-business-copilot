@@ -1,0 +1,20 @@
+{
+    "name": "AI Business Copilot",
+    "version": "20.0.1.0.0",
+    "category": "CRM",
+    "summary": "AI-assisted CRM lead summaries and follow-up drafts",
+    "description": "AI Business Copilot for Odoo Community CRM leads.",
+    "author": "Custom Addons",
+    "license": "LGPL-3",
+    "depends": ["crm", "mail"],
+    "data": [
+        "security/security.xml",
+        "security/ir.access.csv",
+        "views/crm_lead_views.xml",
+        "views/ai_copilot_settings_views.xml",
+        "views/ai_copilot_log_views.xml",
+        "wizard/ai_activity_confirm_views.xml",
+    ],
+    "installable": True,
+    "application": False,
+}

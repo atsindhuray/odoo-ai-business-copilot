@@ -1,0 +1,27 @@
+<odoo>
+    <record id="crm_lead_view_form_ai_copilot" model="ir.ui.view">
+        <field name="name">crm.lead.form.ai.copilot</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_generate_ai_summary" type="object" string="Generate AI Summary" class="btn-primary"/>
+                <button name="action_generate_followup_email" type="object" string="Generate Follow-up Email"/>
+                <button name="action_create_suggested_activity" type="object" string="Create Suggested Activity"/>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="AI Copilot">
+                    <group>
+                        <field name="ai_status"/>
+                        <field name="ai_last_generated_on"/>
+                        <field name="ai_suggested_priority"/>
+                        <field name="ai_summary"/>
+                        <field name="ai_customer_need"/>
+                        <field name="ai_suggested_next_action"/>
+                        <field name="ai_followup_email_draft" widget="html"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

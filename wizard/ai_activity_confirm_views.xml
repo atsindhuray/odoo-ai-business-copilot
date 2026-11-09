@@ -1,0 +1,21 @@
+<odoo>
+    <record id="ai_activity_confirm_wizard_form" model="ir.ui.view">
+        <field name="name">ai.business.copilot.activity.wizard.form</field>
+        <field name="model">ai.business.copilot.activity.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Confirm Suggested Activity">
+                <group>
+                    <field name="lead_id" readonly="1"/>
+                    <field name="subject"/>
+                    <field name="note" widget="html"/>
+                    <field name="user_id"/>
+                    <field name="date_deadline"/>
+                </group>
+                <footer>
+                    <button name="action_confirm" type="object" string="Confirm" class="btn-primary"/>
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
